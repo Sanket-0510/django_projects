@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form  method="post" action="register">
+        {% csrf_token %}
+        <h1>KINDLY FILL THE DETAILS !</h1>
+      <label for="input">Name:</label>
+      <!-- input field for name -->
+      <input type="text" name="name" id="" />
+      <br> </br>
+
+
+      <label for="input">Email:</label>
+      <!-- input filed for last name -->
+      <input type="email" name="email" id="" />
+      <br> </br>
+
+      <!-- input field for age -->
+      <label for="input">Password:</label>
+
+      <input type="password"" name="password" id="" />
+      <br> </br>
+      <label for="input">Confirm Password:</label>
+
+      <input type="password"" name="cpassword" id="" />
+      <br> </br>
+      <label for="input">Roll:</label>
+
+      <!-- dropdown list for the rolls  -->
+      <select name="dropdown">
+        <option value="option1">Student</option>
+        <option value="option2">Teacher</option>
+        <option value="option3">Staff</option>
+      </select>
+
+      <br> </br>
+
+      <button type="submit">submit details</button>
+    </form>
+  </body>
+</html>

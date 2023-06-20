@@ -1,0 +1,32 @@
+{%load static%}
+
+<link rel="stylesheet" href="{% static 'home.css'%}">
+{%for value in feature%}
+<h1>Hello, my name is {{ value.name}}</h1>
+<h2>My age is {{ value.details}}</h2>
+{%endfor%}
+<h2>My friends are:</h2>
+{% for friend in friends %}
+    <h3>{{ friend }}</h3>
+{% endfor %}
+
+<h3>My projects:</h3>
+<h2>Frontend:</h2>
+<ul>
+    {% for front in projects.frontend %}
+        <li>{{ front }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Backend:</h2>
+<ul>
+    {% for back in projects.backend %}
+        <li>{{back}}}</li>
+    {% endfor %}
+</ul>
+
+<form method="post"action="counter">
+    {%csrf_token%}
+    <input type="text" size="50" name="words"> <br>
+    <button type="submit">submit</button>
+</form>
