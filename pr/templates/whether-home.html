@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Welcome to the whether app of this django project</h1>
+       
+      <br> </br>
+
+      <form action="whether", method="post">
+        {%csrf_token%}
+        <input type="text" name="city" id="">
+        <button type="submit">submit</button>
+      </form>
+
+      <br></br>
+
+    <h3>CITY: {{city_name}}</h3>
+    <br></br>
+
+    <h3>TEMP: {{city_temp}}</h3>
+    <br></br>
+
+    <h3>VISIBILITY: {{city_visibility}}</h3>
+    <br></br>
+
+    <h3>WIND SPEED: {{city_wind_speed}}</h3>
+</body>
+</html>

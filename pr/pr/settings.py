@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls'
+    'polls',
+    'blog',
+    'whether'
 ]
 
 MIDDLEWARE = [
@@ -77,9 +79,11 @@ WSGI_APPLICATION = 'pr.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgrasql',
-        'NAME': 'pr',
-        'USER': 'sanket_django',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_djnago_app',
+        'USER': 'db_djnago_app_user',
+        'PASSWORD': 'zp8IHJyYwZtRW1Mv10ZsyuNS9fbv8u0V',
+        'HOST': 'dpg-ci9rba98g3n2q3t5vgm0-a.singapore-postgres.render.com'
         
 
     }
